@@ -13,7 +13,11 @@ module Locomotive
       def __attributes__
         %i(name type label hint required localized unique position
           text_formatting select_options
-          target inverse_of order_by ui_enabled default group)
+          target inverse_of order_by ui_enabled default group read_only)
+      end
+
+      def read_only
+        self[:read_only]
       end
 
       def group
